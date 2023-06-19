@@ -1,1 +1,7 @@
 initialized a new repo
+
+
+reverted changes 
+
+
+unstaged changes
