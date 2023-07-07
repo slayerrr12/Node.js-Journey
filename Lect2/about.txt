@@ -1,0 +1,1 @@
+udrstandf the response object and seding resposnses to the client basd on th specific request 
