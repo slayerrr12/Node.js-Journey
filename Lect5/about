@@ -1,0 +1,16 @@
+learning about npm scripts and why should we use them
+
+npm scipts:
+
+these are the script which we use in our project to do some special things like :
+starting our project
+running tests 
+linting code
+etc.
+
+
+these  provide commands that are liek placeholders for some other commands 
+
+ they have special keywords for difeerent  types of scripts 
+
+ they are very usefyull as they help the user perform important actions based on the file prefernce 
