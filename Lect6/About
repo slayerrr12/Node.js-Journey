@@ -1,1 +1,5 @@
 in this lecture i understood how to use express and why to use express.js as a framework for backend
+
+
+the request goes from top to bottom in a file hence the order in which the middlewares are defined will be the order of their execution
+ 
