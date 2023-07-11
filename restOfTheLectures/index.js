@@ -1,6 +1,8 @@
-const express = require('express');
-const bodyParser = require('body-parser')
+const express = require("express");
+const bodyParser = require("body-parser");
 
+const adminRoutes = require("./routes/admin");
+const userRoutes = require("./routes/shop");
 
 const app = express();
 
@@ -10,30 +12,16 @@ app.use(express.json());
 // Middleware for parsing URL-encoded bodies
 app.use(express.urlencoded({ extended: true }));
 
+app.use("/admin",adminRoutes);
+app.use(userRoutes);
+
+//this is a ccatch all routeDefinedAthte end
 
 
 
-app.use('/add-product', (req, res, next) => {
-    res.send(` <form action="/products" method="POST">
-   <label for="product">Product:</label>
-   <input type="text" id="product" name="product" required>
-   <br>
-   <input type="submit" value="Submit">
- </form>`)
-})
 
+app.use((req, res, next) => {
+  res.status(404).send("<h1>page not found </h1>");
+});
 
-app.get("/products", (req, res, next) => {
-     
-    console.log(req.body)
-    res.send("hi")
-
-})
-
-
-app.use('/', (req, res, next) => {
-    res.send("<h1>hello from localhost</h1>")
-
-})
-
-app.listen(3000)
+app.listen(3000);
