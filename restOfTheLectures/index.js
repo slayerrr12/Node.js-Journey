@@ -5,6 +5,9 @@ const adminRoutes = require("./routes/admin");
 const userRoutes = require("./routes/shop");
 
 const app = express();
+app.set('view engine', 'pug')
+app.set('views','views')
+
 
 // Middleware for parsing JSON bodies
 app.use(express.json());
